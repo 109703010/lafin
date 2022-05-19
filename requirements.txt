@@ -1,5 +1,4 @@
 opencv_python==4.1.2.30
-scipy==1.2.0
 scikit-image -i http://pypi.douban.com/simple/ --trusted-host pypi.douban.com
 torchvision==0.2.1
 torch==1.0.1.post2
@@ -9,3 +8,4 @@ face_alignment==1.1.0
 Pillow==6.2.1
 PyYAML==5.1.2
 skimage==0.0
+scipy==1.2.0
