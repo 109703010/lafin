@@ -1,0 +1,3 @@
+face_alignment==1.1.0
+scikit-image -i http://pypi.douban.com/simple/ --trusted-host pypi.douban.com
+scipy==1.2.0

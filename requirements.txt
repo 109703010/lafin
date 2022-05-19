@@ -5,6 +5,3 @@ matplotlib==3.0.3
 numpy==1.15.4
 Pillow==6.2.1
 PyYAML==5.1.2
-face_alignment==1.1.0
-scikit-image -i http://pypi.douban.com/simple/ --trusted-host pypi.douban.com
-scipy==1.2.0
