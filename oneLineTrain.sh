@@ -1,6 +1,6 @@
 python3 splitData.py
 
-python3 ./scripts/preprocess_landmark.py --path celebA/train/images --output celebA/train/landmarks
+python3 ./scripts/preprocess_landmark.py --path celebA/train/images/img_align_celeba --output celebA/train/landmarks
 python3 ./scripts/flist.py --path celebA/train/landmarks --output celebA/datasets/trainLandmarks.flist
 python3 ./scripts/flist.py --path celebA/train/images --output celebA/datasets/trainImages.flist
 
