@@ -1,7 +1,7 @@
 import os
 import random
 
-file_source = 'celebA/train/images/'
+file_source = 'celebA/train/images/img_align_celeba'
 file_destination = 'celebA/validation/images/'
 
 get_files = os.listdir(file_source)

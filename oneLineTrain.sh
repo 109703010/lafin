@@ -10,5 +10,5 @@ python3 ./scripts/flist.py --path celebA/validation/images --output celebA/datas
 
 python3 maskSet.py
 
-python3 train.py --model 1 --checkpoints celebA/model
-python3 train.py --model 2 --checkpoints celebA/model
+python3 train.py --model 1 --checkpoints checkpoints/celebA
+python3 train.py --model 2 --checkpoints checkpoints/celebA
