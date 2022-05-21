@@ -14,9 +14,9 @@ dataset_path = args.path
 if not os.path.exists(output_path):
     os.mkdir(output_path)
 
-train_path = os.path.join(output_path,'celeba_train_images')
-test_path = os.path.join(output_path,'celeba_test_images')
-val_path = os.path.join(output_path,'celeba_val_images')
+train_path = os.path.join(output_path,'train/images')
+test_path = os.path.join(output_path,'test/images')
+val_path = os.path.join(output_path,'validation/images')
 
 if not os.path.exists(train_path):
     os.mkdir(train_path)
@@ -25,6 +25,8 @@ if not os.path.exists(test_path):
 if not os.path.exists(val_path):
     os.mkdir(val_path)
 
+
+count = 0
 
 filenames = os.listdir(dataset_path)
 
@@ -48,7 +50,7 @@ for filename in filenames:
 
     io.imsave(os.path.join(save_path,filename[:-4]+'.png'),img)
 
-    print(filename)
+    print(filename, " ", count, "\r")
 
 
 

@@ -1,6 +1,6 @@
 import glob
 
-names = glob.glob("celebA/train/images/img_align_celeba/*.jpg")
+names = glob.glob("celebA/train/images/*.jpg")
 
 f = open('celebA/datasets/trainMasks.flist', 'w')
 for i in range(len(names)):
