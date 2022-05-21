@@ -50,7 +50,7 @@ for filename in filenames:
 
     io.imsave(os.path.join(save_path,filename[:-4]+'.png'),img)
 
-    print("\r", filename, " ", count, end="")
+    print(filename, " ", count, end="")
 
     count += 1
 
