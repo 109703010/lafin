@@ -2,6 +2,7 @@ import os
 from skimage import io
 import face_alignment
 import argparse
+import cv2
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--path', type=str, help='path to the celeba img_align_celeba folder')
@@ -20,13 +21,23 @@ filenames = os.listdir(input_path)
 for filename in filenames:
     if filename[-3:] != 'png' and filename[-3:] != 'jpg':
         continue
-    with open(os.path.join(output_path,filename[:-4]+'.txt'), 'w') as f:
-        img = io.imread(os.path.join(input_path,filename))
-        print(filename+'\n')
-        l_pos = fa.get_landmarks(img)
-        for i in range(68):
-            f.write(str(l_pos[0][i,0])+' '+str(l_pos[0][i,1])+' ')
-        f.write('\n')
+    try:
+        img = cv2.imread(os.path.join(input_path, filename))
+        img.shape
+        with open(os.path.join(output_path,filename[:-4]+'.txt'), 'w') as f:
+            img = io.imread(os.path.join(input_path,filename))
+            print(filename+'\n')
+            try:
+                l_pos = fa.get_landmarks(img)
+                for i in range(68):
+                    f.write(str(l_pos[0][i,0])+' '+str(l_pos[0][i,1])+' ')
+                f.write('\n')
+            except:
+                os.remove(os.path.join(output_path,filename[:-4]+'.txt'))
+                os.remove(os.path.join(input_path, filename))
+    except:
+        os.remove(os.path.join(input_path, filename))
+
 
 
 
